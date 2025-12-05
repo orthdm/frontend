@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Formularz i Dane Adresowe - TechForge</title>
+    <meta name="description" content="Skontaktuj się ze mną, aby omówić projekty, współpracę lub zadać pytanie techniczne.">
+    <meta name="keywords" content="kontakt, formularz, zapytanie, współpraca, e-mail">
+    <meta name="author" content="Patryk Barański">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechForge</h1>
+            <nav aria-label="Główna nawigacja strony">
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="projekty.html">Projekty & Blog</a></li>
+                    <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumbs" aria-label="Ścieżka nawigacyjna">
+            <a href="index.html">Start</a> <span>&gt;</span> <strong>Kontakt</strong>
+        </div>
+
+        <section id="dane-kontaktowe">
+            <h2>Skontaktuj Się</h2>
+            <p>Użyj poniższego formularza, aby wysłać zapytanie dotyczące projektu, współpracy lub po prostu podzielić się swoją opinią o blogu. Odpowiadam w ciągu 48 godzin roboczych.</p>
+            
+            <p>Preferowany sposób komunikacji: <cite>E-mail</cite> lub telefon. Nasz <abbr title="Numer Identyfikacji Podatkowej">NIP</abbr> to 123-456-78-90.</p>
+        </section>
+
+        <section id="formularz-kontaktowy">
+            <h3>Formularz Zapytania Projektowego</h3>
+            
+            <form action="/submit-form" method="POST" aria-labelledby="formularz-kontaktowy">
+                
+                <fieldset>
+                    <legend>Dane Osobowe i Kontakt</legend>
+                    
+                    <div>
+                        <label for="imie">Imię (Wymagane):</label>
+                        <input type="text" id="imie" name="imie" placeholder="Jan" required maxlength="50" pattern="[A-Za-zżźćńóśłęąŻŹĆŃÓŚŁĘĄ\s]+" title="Dozwolone są tylko litery i spacje.">
+                    </div>
+                    
+                    <div>
+                        <label for="email">E-mail (Wymagane):</label>
+                        <input type="email" id="email" name="email" placeholder="twoj.email@domena.pl" required>
+                    </div>
+                    
+                    <div>
+                        <label for="telefon">Telefon:</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="123-456-789" pattern="[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" title="Format: XXX-XXX-XXX lub XXXXXXXXX">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Szczegóły Zapytania</legend>
+                    
+                    <div>
+                        <label for="typ-zapytania">Typ Zapytania:</label>
+                        <select id="typ-zapytania" name="typ_zapytania" required>
+                            <option value="" disabled selected>-- Wybierz opcję --</option>
+                            <option value="projekt">Nowy Projekt</option>
+                            <option value="wspolpraca">Współpraca / Rekrutacja</option>
+                            <option value="blog">Pytanie dot. Bloga</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="url-strony">URL Twojej Strony/Repozytorium:</label>
+                        <input type="url" id="url-strony" name="url_strony" placeholder="https://www.przyklad.pl">
+                    </div>
+
+                    <div>
+                        <label for="budzet">Szacowany Budżet Projektu (w tys. PLN):</label>
+                        <input type="range" id="budzet" name="budzet" min="1" max="50" step="1" value="10">
+                        <output for="budzet" id="budzet-output">10</output>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const range = document.getElementById('budzet');
+                                const output = document.getElementById('budzet-output');
+                                output.textContent = range.value;
+                                range.addEventListener('input', function() {
+                                    output.textContent = range.value;
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <div id="newsletter">
+                        <p>Chcesz otrzymywać Newsletter?</p>
+                        <label for="newsletter-tak">
+                            <input type="radio" id="newsletter-tak" name="newsletter" value="tak"> Tak
+                        </label>
+                        <label for="newsletter-nie">
+                            <input type="radio" id="newsletter-nie" name="newsletter" value="nie" checked> Nie
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="rodo" name="rodo" required>
+                        <label for="rodo">Akceptuję <a href="polityka-prywatnosci.html" target="_blank" rel="noopener noreferrer">Politykę Prywatności</a> (Wymagane)</label>
+                    </div>
+                    
+                    <div>
+                        <label for="wiadomosc">Treść Wiadomości (Min. 50 znaków):</label>
+                        <textarea id="wiadomosc" name="wiadomosc" rows="6" required minlength="50" placeholder="Opisz krótko swój projekt lub pytanie..."></textarea>
+                    </div>
+
+                </fieldset>
+                
+                <button type="submit">Wyślij Zapytanie</button>
+                <button type="reset">Wyczyść Formularz</button>
+            </form>
+        </section>
+        
+        <aside aria-label="Lokalizacja i dojazd">
+            <h3>Nasza Lokalizacja</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8000000000004!2d21.012222!3d52.229676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669b922055%3A0x1b400e9f1680d75a!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1701809000000!5m2!1spl!2spl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa lokalizacji firmy TechForge: Pałac Kultury i Nauki w Warszawie."></iframe>
+            <p>Spotkania możliwe po wcześniejszym umówieniu pod adresem: <address>ul. Technologiczna 10, 00-001 Kodowo.</address></p>
+        </aside>
+    </main>
+    
+    <footer class="container">
+        <p>&copy; 2025 TechForge. Wszelkie prawa zastrzeżone. |
+            Kontakt: <address>ul. Technologiczna 10, 00-001 Kodowo</address>
+        </p>
+    </footer>
+</body>
+</html>

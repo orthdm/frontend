@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="pl-PL">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria multimedialna - Zadanie 4 (z odtworzeniem YouTube)</title>
+  <meta name="description" content="Galeria obrazów, wideo i audio.">
+  <meta name="author" content="Patryk Barański">
+</head>
+<body>
+  <h1>Moja galeria multimedialna</h1>
+  
+  <!-- Sekcja obrazów -->
+  <section>
+    <h2>Zdjęcia</h2>
+    <!-- Używam zewnętrznych obrazów (HTTPS) i lazy-loading -->
+    <p><!-- Obrazy z atrybutami alt, width/height oraz lazy-loading --></p>
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&h=600&fit=crop" alt="Widok natury" width="900" height="600" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=800&h=500&fit=crop" alt="DJ" width="800" height="500" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop" alt="Technologia" width="800" height="500" loading="lazy">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop" alt="Krajobraz górski" width="600" height="400" loading="lazy">
+      <figcaption>Pejzaż górskiego jeziora</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop" alt="Osoba przy komputerze" width="600" height="400" loading="lazy">
+      <figcaption>Proces kodowania</figcaption>
+    </figure>
+  </section>
+  
+  <!-- Sekcja wideo -->
+  <section>
+    <h2>Wideo (YouTube)</h2>
+    <!-- EMBED: używamy oficjalnego formatu /embed/ID -->
+    <p><!-- Osadzony film z YouTube — użyto adresu embed i atrybutów allow/allowfullscreen. --></p>
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/8DEWLb3p288"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
+
+  </section>
+  
+  <!-- Sekcja audio -->
+  <section>
+    <h2>Audio</h2>
+    <p><!-- Element <audio> z kontrolkami i dwoma formatami źródła --></p>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+      Twoja przeglądarka nie obsługuje audio.
+    </audio>
+  </section>
+</body>
+</html>

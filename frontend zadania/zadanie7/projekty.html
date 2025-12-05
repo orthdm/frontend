@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty i Blog - TechForge</title>
+    <meta name="description" content="Kolekcja moich najlepszych projektów inżynierii oprogramowania i artykułów technicznych.">
+    <meta name="keywords" content="projekty, case study, blog, tutoriale, React, Node.js, baza danych">
+    <meta name="author" content="Patryk Barański">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechForge</h1>
+            <nav aria-label="Główna nawigacja strony">
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="projekty.html" aria-current="page">Projekty & Blog</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumbs" aria-label="Ścieżka nawigacyjna">
+            <a href="index.html">Start</a> <span>&gt;</span> <strong>Projekty & Blog</strong>
+        </div>
+
+        <section id="projekty">
+            <h2>Projekty Deweloperskie (Case Studies)</h2>
+            <article id="case-study">
+                <h3>1. System Zarządzania Kontentem (CMS) dla NGO</h3>
+                <p><strong>Charakterystyka:</strong> Pełny system CMS stworzony z myślą o organizacjach pozarządowych. Użyto w nim technologii React (dla dynamicznego interfejsu panelu administracyjnego) oraz Node.js z bazą danych PostgreSQL. Projekt skupiał się na <abbr title="User Experience">UX</abbr> i optymalizacji pod kątem wolnych łączy, typowych dla użytkowników organizacji w krajach rozwijających się.</p>
+                <img src="cms-mockup.jpg" alt="Zrzut ekranu panelu administracyjnego CMS" width="700" height="450">
+                <p><strong>Cele projektu:</strong> Głównym celem było stworzenie intuicyjnego narzędzia, które wymaga minimalnej wiedzy technicznej do zarządzania stroną i donacjami. Osiągnęliśmy to poprzez wdrożenie edytora WYSIWYG i zautomatyzowane procesy deploymentu.</p>
+                <p>Wdrożenie systemu przyniosło <strong>25% wzrost</strong> efektywności w publikowaniu treści. Skupienie na dostępności miało kluczowe znaczenie, zwłaszcza w sekcji obsługującej formularze darowizn. <mark>Wykorzystaliśmy wzorce ARIA</mark>, aby zapewnić kompatybilność ze wszystkimi popularnymi czytnikami ekranowymi. Zastosowanie <abbr title="Progressive Web Application">PWA</abbr> pozwoliło również na działanie w trybie offline, co było kluczowym wymaganiem klienta.</p>
+                
+                <h4>Wskaźniki Wydajności Projektu</h4>
+                <table>
+                    <caption>Statystyki wydajności systemu CMS po 6 miesiącach</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Metryka</th>
+                            <th scope="col">Wartość</th>
+                            <th scope="col">Poprawa (vs. poprzedni system)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Czas ładowania strony głównej</th>
+                            <td>1.2s</td>
+                            <td>+45%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Współczynnik konwersji (Donacje)</th>
+                            <td>3.1%</td>
+                            <td>+15%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Liczba błędów krytycznych</th>
+                            <td>0/miesiąc</td>
+                            <td>-100%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Dane zebrane w okresie <time datetime="2025-06">czerwiec 2025</time> - <time datetime="2025-11">listopad 2025</time>.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Ten projekt był świetną okazją do pogłębienia wiedzy o optymalizacji baz danych. Konkretnie, zastosowałem indeksowanie na kluczowych kolumnach, co przyspieszyło zapytania o 300% w przypadku dużego zbioru danych. Dowiedz się więcej o szczegółach technicznych, kontaktując się ze mną.</p>
+                <h4>Demo Systemu</h4>
+                <video controls width="500" height="300" poster="video-poster.jpg">
+                    <source src="cms-demo.mp4" type="video/mp4">
+                    <track src="subtitles-pl.vtt" kind="subtitles" srclang="pl" label="Polski">
+                    Przepraszamy, Twoja przeglądarka nie obsługuje wideo. <a href="cms-demo.mp4">Pobierz wideo</a>.
+                </video>
+            </article>
+        </section>
+
+        <section id="blog-posts">
+            <h2>Blog - Analizy i Tutoriale</h2>
+             <article id="css-article">
+                <h3>2. Masterowanie nowoczesnego CSS: Flexbox vs. Grid</h3>
+                <p>Jedną z najczęstszych pytań w świecie front-endu jest: "Kiedy używać Flexbox, a kiedy Grid?". Choć oba są potężnymi narzędziami do tworzenia układu, mają różne przeznaczenia. **Flexbox jest jednowymiarowy** – idealny do wyrównywania elementów wzdłuż jednej osi (rzędu lub kolumny). <mark>CSS Grid jest dwuwymiarowy</mark> – stworzony do projektowania złożonych, opartych na kolumnach i wierszach, układów całej strony. Zrozumienie tej podstawowej różnicy jest kluczowe dla efektywnego projektowania stron.</p>
+                
+                <p>W praktyce, najlepsze rezultaty osiąga się przez ich połączenie. Używam **Grid do głównego layoutu** (nagłówek, nawigacja, główna treść, stopka, sidebar), a następnie **Flexbox wewnątrz komponentów** (np. elementy nawigacyjne w menu, układ kart produktów). To podejście zapewnia maksymalną kontrolę i minimalizuje konieczność pisania skomplikowanych zapytań medialnych. Pamiętaj, że czysty, semantyczny <abbr title="HyperText Markup Language">HTML</abbr> jest podstawą, na której budujesz style.</p>
+                <img src="grid-layout.jpg" alt="Schemat układu strony z użyciem CSS Grid" width="600" height="400">
+                
+                <h4>Wskazówki Dotyczące Flexbox i Grid</h4>
+                <ul>
+                    <li>Dla układów <ins>komponentowych</ins> (np. pasek narzędzi) użyj **Flexbox**.</li>
+                    <li>Dla układów <del>strony głównej</del> (header, main, footer) użyj **Grid**.</li>
+                    <li>Zawsze testuj kompatybilność w przeglądarkach (Can I Use jest Twoim przyjacielem).</li>
+                </ul>
+                <p>Niestety, wielu początkujących deweloperów nadal polega na starych metodach opartych na floatach lub przestarzałych frameworkach. W erze nowoczesnego CSS, te praktyki powinny zostać zarzucone na rzecz bardziej elastycznych i czytelnych rozwiązań. Czysty i nowoczesny CSS to sztuka, którą warto opanować.</p>
+            </article>
+
+            <article id="a11y-article">
+                <h3>3. Accessibility (A11y) w praktyce</h3>
+                 <p>Accessibility, często skracane do **A11y** (A, 11 liter, Y), to zestaw zasad, które zapewniają, że strony internetowe mogą być używane przez osoby niepełnosprawne. Wymaga to uwzględnienia osób niewidomych (używających czytników ekranu), niedowidzących, z problemami motorycznymi oraz poznawczymi.</p>
+                <p>Kluczowe elementy A11y to:</p>
+                <ul>
+                    <li>Poprawne użycie atrybutów **`alt`** dla obrazów. (Wymagane)</li>
+                    <li>Logiczna hierarchia nagłówków (h1-h6). (Wymagane)</li>
+                    <li>Użycie <abbr title="Accessible Rich Internet Applications">ARIA</abbr> dla niestandardowych elementów interfejsu.</li>
+                    <li>Odpowiedni kontrast kolorów.</li>
+                    <li>Nawigacja za pomocą klawiatury (brak focusów uniemożliwia to).</li>
+                </ul>
+                <p>Pamiętaj, że każda strona powinna zaczynać się od <ins>poprawnej semantyki</ins>. Jeśli używasz `<button>` zamiast `<div>` dla przycisku, już zrobiłeś pierwszy krok w stronę dostępności. Zawsze weryfikuj swój kod za pomocą narzędzi takich jak WAVE, aby zidentyfikować potencjalne problemy. Właściwa implementacja A11y świadczy o profesjonalizmie i szacunku dla użytkownika. To jest obowiązek każdego dewelopera.</p>
+                <img src="alt-text-example.jpg" alt="Przykład dobrego i złego tekstu alternatywnego dla obrazu" width="600" height="350">
+            </article>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <p>&copy; 2025 TechForge. Wszelkie prawa zastrzeżone. |
+            Kontakt: <address>ul. Technologiczna 10, 00-001 Kodowo</address>
+        </p>
+    </footer>
+</body>
+</html>

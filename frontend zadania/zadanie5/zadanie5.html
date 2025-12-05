@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz rejestracyjny - Zadanie 5</title>
+  <meta name="description" content="Zaawansowany formularz kontaktowy z różnymi polami.">
+  <meta name="author" content="Patryk Barański">
+</head>
+<body>
+  <h1>Formularz rejestracyjny</h1>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Dane osobowe</legend>
+      <label for="name">Imię i nazwisko:</label><br>
+      <input type="text" id="name" name="name" required data-info="imię"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" data-info="email"><br><br>
+
+      <label for="tel">Telefon:</label><br>
+      <input type="tel" id="tel" name="tel" placeholder="123456789" pattern="\+?\d{9,15}" data-info="telefon"><br><br>
+
+      <label for="dob">Data urodzenia:</label><br>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      <label for="password">Hasło:</label><br>
+      <input type="password" id="password" name="password" required minlength="8"><br><br>
+
+      <label for="confirm">Potwierdź hasło:</label><br>
+      <input type="password" id="confirm" name="confirm" required minlength="8"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferencje</legend>
+      <p>Płeć:</p>
+      <input type="radio" id="gender-m" name="gender" value="m">
+      <label for="gender-m">Mężczyzna</label>
+      <input type="radio" id="gender-f" name="gender" value="f">
+      <label for="gender-f">Kobieta</label>
+      <input type="radio" id="gender-o" name="gender" value="o">
+      <label for="gender-o">Inna</label><br><br>
+
+      <p>Zainteresowania:</p>
+      <input type="checkbox" id="int1" name="interest" value="sport">
+      <label for="int1">Sport</label>
+      <input type="checkbox" id="int2" name="interest" value="music">
+      <label for="int2">Muzyka</label>
+      <input type="checkbox" id="int3" name="interest" value="books">
+      <label for="int3">Książki</label>
+      <input type="checkbox" id="int4" name="interest" value="travel">
+      <label for="int4">Podróże</label>
+      <input type="checkbox" id="int5" name="interest" value="movies">
+      <label for="int5">Filmy</label><br><br>
+
+      <label for="country">Kraj:</label><br>
+      <select id="country" name="country" required>
+        <option value="">-- Wybierz kraj --</option>
+        <option value="pl">Polska</option>
+        <option value="de">Niemcy</option>
+        <option value="us">USA</option>
+        <option value="uk">Wielka Brytania</option>
+        <option value="fr">Francja</option>
+        <option value="es">Hiszpania</option>
+        <option value="it">Włochy</option>
+        <option value="ru">Rosja</option>
+        <option value="cn">Chiny</option>
+        <option value="jp">Japonia</option>
+      </select><br><br>
+
+      <label for="exp">Poziom doświadczenia (0-10):</label><br>
+      <input type="range" id="exp" name="exp" min="0" max="10" step="1" value="5"><br><br>
+
+      <label for="cv">CV (PDF lub DOC/DOCX):</label><br>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx"><br><br>
+
+      <label for="website">Twoja strona WWW:</label><br>
+      <input type="url" id="website" name="website" placeholder="https://"><br><br>
+
+      <label for="bio">O mnie (max 500 znaków):</label><br>
+      <textarea id="bio" name="bio" rows="5" maxlength="500"></textarea><br><br>
+
+      <input type="checkbox" id="agree" name="agree" required>
+      <label for="agree">Akceptuję regulamin</label><br><br>
+    </fieldset>
+
+    <button type="submit">Wyślij</button>
+    <button type="reset">Wyczyść</button>
+  </form>
+</body>
+</html>

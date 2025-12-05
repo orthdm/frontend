@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refaktoryzacja semantyczna - Zadanie 6</title>
+  <meta name="description" content="Przykład refaktoryzacji kodu z użyciem semantycznych tagów HTML5.">
+  <meta name="author" content="Patryk Barański">
+</head>
+<body>
+  <header>
+    <h1>Moja Strona</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">O nas</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Tytuł artykułu</h2>
+      <p><strong>Autor:</strong> Jan Kowalski | <strong>Data:</strong> <time datetime="2025-01-15">2025-01-15</time></p>
+      <p>To jest pierwszy paragraf artykułu...</p>
+      <p>To jest drugi paragraf artykułu...</p>
+    </article>
+
+    <article>
+      <h2>Drugi artykuł</h2>
+      <p><strong>Autor:</strong> Anna Nowak | <strong>Data:</strong> <time datetime="2025-01-16">2025-01-16</time></p>
+      <p>Treść drugiego artykułu...</p>
+    </article>
+
+    <aside>
+      <h3>Kategorie</h3>
+      <ul>
+        <li>Technologia</li>
+        <li>Nauka</li>
+        <li>Sport</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!--
+  Komentarz (ok. 230 słów) wyjaśniający zmiany:
+
+  Przepisałem strukturę strony, zastępując ogólne kontenery <div> odpowiednimi elementami semantycznymi HTML5:
+  <header> dla górnej części strony zawierającej tytuł i nawigację, <nav> dla menu nawigacyjnego, <main> jako główna przestrzeń treści,
+  <article> dla niezależnych wpisów/artykułów, <aside> dla treści pobocznych (widgety, kategorie) oraz <footer> dla stopki.
+  Dla dat użyto elementu <time> z atrybutem datetime, co ułatwia parsowanie dat przez maszyny i poprawia dostępność.
+  Korzyści semantycznego HTML to przede wszystkim lepsze zrozumienie struktury strony przez wyszukiwarki i czytniki ekranowe.
+  Semantyka pomaga indeksować kluczowe fragmenty (tytuły, artykuły, stopki) oraz poprawia nawigację dla użytkowników korzystających z technologii wspomagających.
+  Z punktu widzenia SEO, odpowiednio zorganizowane nagłówki (<h1>, <h2>) oraz znaczniki artykułów wskazują, które treści są najważniejsze.
+  Użycie semantycznych elementów poprawia także utrzymanie kodu i współpracę w zespole — nowy developer szybciej zrozumie strukturę.
+  <div> nadal ma swoje miejsce: stosujemy go do celów czysto prezentacyjnych (kontenery świeckie, layouty, wrappery) tam, gdzie nie istnieje właściwy element semantyczny.
+  Podsumowując: semantyka zwiększa dostępność, czytelność i wartość SEO, natomiast <div> pozostaje narzędziem pomocniczym do wystylizowania układu.
+  -->
+</body>
+</html>
