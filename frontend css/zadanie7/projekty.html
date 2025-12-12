@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty - TechForge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechForge</h1>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">☰</label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="projekty.html" aria-current="page">Projekty</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Start</a> &gt; <strong>Projekty</strong>
+        </div>
+
+        <section id="projekty">
+            <h2>Moje Projekty</h2>
+            <article>
+                <h3>System CMS</h3>
+                <img src="https://placehold.co/600x400/e2e8f0/2563eb?text=CMS+Project" alt="CMS">
+                <p>System zarządzania treścią zbudowany w React i Node.js.</p>
+                <a href="#">Zobacz Case Study »</a>
+            </article>
+            <article>
+                <h3>E-commerce App</h3>
+                <img src="https://placehold.co/600x400/e2e8f0/2563eb?text=Shop+App" alt="Shop">
+                <p>Sklep internetowy z płatnościami Stripe.</p>
+                <a href="#">Zobacz kod »</a>
+            </article>
+        </section>
+
+        <section id="blog-posts">
+            <h2>Artykuły Techniczne</h2>
+            <article>
+                <h3>Flexbox vs Grid</h3>
+                <p>Kiedy używać którego narzędzia?</p>
+                <a href="#">Czytaj »</a>
+            </article>
+            <article>
+                <h3>React Hooks</h3>
+                <p>Przewodnik po useEffect i useState.</p>
+                <a href="#">Czytaj »</a>
+            </article>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <p>© 2025 TechForge.</p>
+    </footer>
+</body>
+</html>

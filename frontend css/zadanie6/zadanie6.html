@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Animacje i transformacje — Zadanie 6</title>
+<meta name="author" content="Patryk Barański">
+<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CSS Animation Showcase</h1>
+      <div class="lead">Transitions • 2D transforms • Keyframes • 3D card flip</div>
+    </header>
+    <section class="section" aria-labelledby="a-title">
+      <h2 id="a-title">A — Transitions</h2>
+      <div class="grid">
+        <div class="demo">
+          <div class="label">1. Background color (hover)</div>
+          <a class="btn" href="#0">Hover me</a>
+        </div>
+        <div class="demo">
+          <div class="label">2. Scale on hover</div>
+          <div class="card-scale">POP</div>
+        </div>
+        <div class="demo">
+          <div class="label">3. Timing functions</div>
+          <div class="timing-row">
+            <div class="timing ease">ease</div>
+            <div class="timing ease-in-out">ease-in-out</div>
+            <div class="timing cubic">cubic</div>
+          </div>
+        </div>
+
+        <div class="demo">
+          <div class="label">4. Cascade (delayed buttons)</div>
+          <div class="cascade-row">
+            <div class="cbtn">One</div>
+            <div class="cbtn">Two</div>
+            <div class="cbtn">Three</div>
+            <div class="cbtn">Four</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="b-title">
+      <h2 id="b-title">B — 2D Transforms</h2>
+      <div class="transforms">
+        <div class="demo demo-translate">translate()</div>
+        <div class="demo demo-rotate">rotate()</div>
+        <div class="demo demo-scale">scale()</div>
+        <div class="demo demo-skew">skew()</div>
+        <div class="demo demo-combo">combo</div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="c-title">
+      <h2 id="c-title">C — Keyframe Animations</h2>
+      <div class="grid">
+        <div class="demo">
+          <div class="label">Pulse (infinite)</div>
+          <div class="pulse">❤</div>
+        </div>
+
+        <div class="demo">
+          <div class="label">Spinner (infinite)</div>
+          <div class="spinner" aria-hidden="true"></div>
+        </div>
+
+        <div class="demo">
+          <div class="label">Text entrance (starts with opening the card)</div>
+          <div class="slide-in">Welcome!</div>
+        </div>
+
+        <div class="demo">
+          <div class="label">Breathe (alternate)</div>
+          <div class="breathe">breathe</div>
+        </div>
+
+        <div class="demo" style="flex:1 1 100%;">
+          <div class="label">Multi-step animation</div>
+          <div class="multi">multi-step demo</div>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="bonus-title">
+      <h2 id="bonus-title">Bonus — 3D Card Flip</h2>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+        <div class="flip-scene">
+          <div class="flip-card">
+            <div class="flip-face flip-front">FRONT</div>
+            <div class="flip-face flip-back">BACK</div>
+          </div>
+        </div>
+        <div style="max-width:420px">
+          <div class="label">Hover the card to rotate around Y axis (3D).</div>
+          <div class="label" style="margin-top:6px;color:var(--muted)">Uses perspective + backface-visibility + preserve-3d</div>
+        </div>
+      </div>
+    </section>
+    <footer style="text-align:center;color:var(--muted);margin-top:18px">
+      Tip: Try <kbd>prefers-reduced-motion</kbd> in your OS to reduce animations for accessibility.
+    </footer>
+  </div>
+</body>
+</html>

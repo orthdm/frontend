@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 1 – Trzy sposoby na CSS</title>
+  <meta name="description" content="Trzy sposoby użycia CSS">
+  <meta name="author" content="Patryk Barański">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Styl wewnętrzny (internal) - nadpisze wartości z style.css przy tej samej specyficzności -->
+  <style>
+    /* Styl dla całej strony */
+    body {
+      font-family: "Georgia", serif;
+      background-color: #fff8dc; /* jasny krem */
+      padding: 1rem;
+    }
+
+    /* Selektor elementowy */
+    p {
+      color: #666666;
+      line-height: 1.6;
+    }
+
+    /* Selektor klasowy */
+    .highlight {
+      color: green;
+      font-weight: 600;
+    }
+
+    /* Selektor ID */
+    #main {
+      font-size: 18px;
+      border-left: 3px solid #ccc;
+      padding-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Element z stylem inline (kolor tekstu na niebieski) -->
+  <p style="color: blue;">To jest przykładowa zawartość strony (ten akapit ma inline color: blue).</p>
+
+  <!-- Inny element z stylem inline (rozmiar czcionki 20px).
+       Ma też id oraz klasę, aby pokazać różne selektory -->
+  <p id="main" class="highlight" style="font-size: 20px;">
+    Drugi akapit (ma inline font-size: 20px). Kolor dla tego akapitu pochodzi z klasy/ID z sekcji &lt;style&gt; (zobacz zielony tekst),
+    natomiast rozmiar czcionki pochodzi z inline i nadpisuje wartości z internal/external.
+  </p>
+</body>
+</html>
+
+<!-- Kaskada CSS decyduje który styl zostanie zastosowany: najpierw liczy się ważność (!important > normal),
+następnie pochodzenie (user-agent, user, author), dalej specyficzność selektora (ID > klasa > element) 
+i wreszcie kolejność w kodzie (późniejszy nadpisuje wcześniejszy przy równej specyficzności). 
+W praktyce przy równych selektorach priorytet ma: inline > internal (w <style>) > external (pod warunkiem tej samej specyficzności). 
+Inline jest najsilniejsze, bo ma najwyższą specyficzność. 
+Kiedy stosować: inline do szybkich poprawek lub dynamicznego stylowania z JS; 
+internal do stylów specyficznych dla pojedynczej strony (np. demo lub strona jednozadaniowa); 
+external do wspólnego stylingu całej witryny — najlepsze do utrzymania i ponownego użycia. 
+
+Zalety/wady: external — łatwe utrzymanie i cache, ale wymaga dodatknego pliku; 
+internal — prostota przy jednej stronie, ale mniej skalowalne; 
+inline — bardzo precyzyjne, jednak nieczytelne i trudno je utrzymać. 
+DevTools pomaga zobaczyć, które reguły są nadpisane i dlaczego.-->

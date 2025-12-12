@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zadanie CSS 3 - Box Model w praktyce</title>
+  <meta name="description" content="Przykłady list i tabela porównawcza tagów HTML."/>
+  <meta name="author" content="Patryk Barański"/>
+  
+  <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+  <h1>Przykłady list i tabela</h1>
+
+  <h2>Lista nieuporządkowana</h2>
+  <ul class="custom-ul">
+    <li>Elastyczność</li>
+    <li>Przenośność</li>
+    <li>Skalowalność</li>
+    <li>Dostępność</li>
+    <li>Wsparcie społeczności</li>
+  </ul>
+
+  <h2>Lista uporządkowana</h2>
+  <ol class="custom-ol">
+    <li>Analiza wymagań</li>
+    <li>Projektowanie systemu</li>
+    <li>Pisanie kodu</li>
+    <li>Testowanie</li>
+    <li>Wdrażanie</li>
+  </ol>
+
+  <h2>Lista definicji</h2>
+  <dl class="def-list">
+    <dt>DOCTYPE</dt>
+      <dd>Deklaracja informująca przeglądarkę o wersji HTML.</dd>
+    <dt>Tag</dt>
+      <dd>Element języka znaczników, np. &lt;p&gt; lub &lt;a&gt;.</dd>
+    <dt>Atrybut</dt>
+      <dd>Parametr dopasowujący zachowanie tagu, np. href czy src.</dd>
+    <dt>Semantyka</dt>
+      <dd>Zastosowanie odpowiednich tagów dla znaczenia treści.</dd>
+    <dt>Walidacja</dt>
+      <dd>Sprawdzenie kodu pod kątem zgodności ze standardem.</dd>
+  </dl>
+
+  <h2>Zagnieżdżona lista</h2>
+  <ul class="custom-ul">
+    <li>Główna kategoria A
+      <ul>
+        <li>Podkategoria A1</li>
+        <li>Podkategoria A2</li>
+      </ul>
+    </li>
+    <li>Główna kategoria B
+      <ul>
+        <li>Podkategoria B1</li>
+        <li>Podkategoria B2</li>
+      </ul>
+    </li>
+    <li>Główna kategoria C</li>
+  </ul>
+
+  <h2>Porównanie podstawowych tagów HTML</h2>
+  <table id="tag-compare" class="data-table">
+    <thead>
+      <tr><th colspan="4">Podstawowe tagi HTML</th></tr>
+      <tr>
+        <th>Nazwa</th>
+        <th>Przeznaczenie</th>
+        <th>Przykład użycia</th>
+        <th>Czy wymaga zamknięcia?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&lt;a&gt;</td>
+        <td>Tworzy hiperłącze</td>
+        <td><code>&lt;a href="url"&gt;link&lt;/a&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;img&gt;</td>
+        <td>Wstawia obrazek</td>
+        <td><code>&lt;img src="obraz.jpg" alt="tekst"&gt;</code></td>
+        <td>nie</td>
+      </tr>
+      <tr>
+        <td>&lt;p&gt;</td>
+        <td>Akapit tekstu</td>
+        <td><code>&lt;p&gt;Tekst&lt;/p&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;ul&gt;</td>
+        <td>Lista nieuporządkowana</td>
+        <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;div&gt;</td>
+        <td>Kontener blokowy</td>
+        <td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+        <td>tak</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Demonstracja Box Model</h2>
+  <p class="intro-note">Dwa pola o deklarowanej szerokości <strong>300px</strong>, padding: <strong>20px</strong>, border: <strong>5px</strong> — pokazane obok siebie: pierwszy używa <code>box-sizing: content-box</code>, drugi <code>box-sizing: border-box</code>.</p>
+
+  <div class="box-demo">
+    <div class="box content">
+      <div class="box-inner">content-box<br>(width: 300px)</div>
+      <p class="caption">Rzeczywista szerokość zewnętrzna: <strong>350px</strong> (300 + 2×20 padding + 2×5 border)</p>
+    </div>
+
+    <div class="box border">
+      <div class="box-inner">border-box<br>(width: 300px)</div>
+      <p class="caption">Rzeczywista szerokość zewnętrzna: <strong>300px</strong> (padding i border wliczone)</p>
+    </div>
+  </div>
+
+</body>
+</html>

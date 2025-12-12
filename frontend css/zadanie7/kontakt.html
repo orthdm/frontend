@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - TechForge</title>
+    <meta name="description" content="Skontaktuj się ze mną.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechForge</h1>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">☰</label>
+            
+            <nav aria-label="Główna nawigacja strony">
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="projekty.html">Projekty & Blog</a></li>
+                    <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumbs" aria-label="Ścieżka nawigacyjna">
+            <a href="index.html">Start</a> <span>></span> <strong>Kontakt</strong>
+        </div>
+
+        <section id="dane-kontaktowe">
+            <h2>Skontaktuj Się</h2>
+            <p>Użyj poniższego formularza, aby wysłać zapytanie. Odpowiadam w ciągu 48h.</p>
+        </section>
+
+        <section id="formularz-kontaktowy">
+            <h3>Formularz Zapytania</h3>
+            <form action="/submit-form" method="POST">
+                <fieldset>
+                    <legend>Dane Osobowe</legend>
+                    <div>
+                        <label for="imie">Imię:</label>
+                        <input type="text" id="imie" name="imie" required>
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Szczegóły</legend>
+                    <div>
+                        <label for="typ-zapytania">Typ:</label>
+                        <select id="typ-zapytania" name="typ_zapytania">
+                            <option value="projekt">Nowy Projekt</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="wiadomosc">Wiadomość:</label>
+                        <textarea id="wiadomosc" name="wiadomosc" rows="6" required></textarea>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
+        
+        <aside aria-label="Lokalizacja">
+            <h3>Nasza Lokalizacja</h3>
+            <div style="background:#ddd; height:300px; display:flex; align-items:center; justify-content:center;">
+                (Tu była mapa Google)
+            </div>
+            <p><address>ul. Technologiczna 10, 00-001 Kodowo</address></p>
+        </aside>
+    </main>
+    
+    <footer class="container">
+        <p>© 2025 TechForge. | Kontakt: <address>ul. Technologiczna 10, 00-001 Kodowo</address></p>
+    </footer>
+</body>
+</html>

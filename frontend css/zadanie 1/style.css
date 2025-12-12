@@ -1,0 +1,22 @@
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+}
+
+p {
+  color: #333333;
+  margin: 0 0 1rem 0;
+}
+
+.highlight {
+  color: darkred;
+  font-style: italic;
+}
+
+#main {
+  font-size: 16px;
+  border-left: 4px dashed #999;
+  padding-left: 0.6rem;
+}

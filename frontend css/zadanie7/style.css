@@ -1,0 +1,239 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary: #475569;
+    --accent: #f59e0b;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-radius: 8px;
+    --spacing: 1.5rem;
+    --max-width: 1200px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body: #111827;
+        --bg-card: #1f2937;
+        --text-main: #f3f4f6;
+        --text-muted: #9ca3af;
+        --secondary: #374151;
+    }
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+.menu-checkbox {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    color: var(--primary);
+}
+main {
+    padding: var(--spacing) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+section, article, aside {
+    background: var(--bg-card);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+#ostatnie-wpisy, #projekty, #blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing);
+    background: transparent; 
+    box-shadow: none;
+    padding: 0;
+}
+#ostatnie-wpisy h2, #projekty h2, #blog-posts h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+article a {
+    margin-top: auto;
+    display: inline-block;
+    padding-top: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: var(--bg-body);
+    color: var(--text-main);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .menu-checkbox:checked ~ nav {
+        max-height: 300px;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--bg-body);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+    }
+    
+    aside {
+        order: 10;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+            "intro intro"
+            "content sidebar";
+        grid-template-columns: 3fr 1fr;
+        gap: var(--spacing);
+        align-items: start;
+    }
+
+
+    #wprowadzenie, .breadcrumbs { grid-area: intro; }
+    
+    #ostatnie-wpisy, #dane-kontaktowe, #formularz-kontaktowy, #projekty, #blog-posts { 
+        grid-area: content; 
+    }
+    
+    aside { grid-area: sidebar; }
+
+
+    #ostatnie-wpisy article:first-of-type {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    #ostatnie-wpisy article:first-of-type img {
+        width: 50%;
+        object-fit: cover;
+    }
+}
+@media print {
+    header, footer, aside, .menu-button { display: none; }
+    body { background: white; color: black; }
+    a[href]:after { content: " (" attr(href) ")"; }
+}
