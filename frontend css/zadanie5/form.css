@@ -111,11 +111,12 @@ select:invalid + .status::after {
   color: var(--danger);
 }
 
-label[for]::after {
-  content: attr(for) == "agree" ? "" : "*";
+label[for]:not([for="agree"])::after {
+  content: "*";
   color: red;
   margin-left: 4px;
 }
+
 
 input[required] + .status::before {
   content: "";
@@ -190,3 +191,4 @@ button {
 button:hover {
   background: #1d4ea8;
 }
+
