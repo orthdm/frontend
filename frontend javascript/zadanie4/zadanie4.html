@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria multimedialna - Zadanie 4</title>
+  <meta name="description" content="Galeria obrazów, wideo i audio.">
+  <meta name="author" content="Patryk Barański">
+
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body id="top">
+  <header class="site-header" role="banner">
+    <div class="header-overlay">
+      <h1>Moja galeria multimedialna</h1>
+      <p class="lead">Zdjęcia • Wideo • Audio — demonstracja background, pozycjonowania i CSS lightbox</p>
+    </div>
+  </header>
+  <nav class="social-bar" aria-label="Social media">
+    <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+  <main>
+    <section class="gallery-section">
+      <h2 class="sticky-title">Zdjęcia</h2>
+      <p class="note">Kliknij miniaturę, aby powiększyć (CSS lightbox). Na obrazach: badge i opis na hover.</p>
+
+      <div class="gallery-grid">
+        <figure class="card">
+          <span class="badge">NEW</span>
+          <a href="#img1" class="thumb-link" aria-describedby="cap1">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&h=600&fit=crop" alt="Widok natury" loading="lazy" width="900" height="600">
+            <div class="fig-overlay"><p>Krajobraz górskiego jeziora</p></div>
+          </a>
+          <figcaption id="cap1">Widok natury</figcaption>
+        </figure>
+
+        <figure class="card">
+          <span class="badge">PHOTO</span>
+          <a href="#img2" class="thumb-link" aria-describedby="cap2">
+            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=800&h=500&fit=crop" alt="DJ" loading="lazy" width="800" height="500">
+            <div class="fig-overlay"><p>DJ — dynamika muzyki</p></div>
+          </a>
+          <figcaption id="cap2">DJ</figcaption>
+        </figure>
+        <figure class="card">
+          <span class="badge">TECH</span>
+          <a href="#img3" class="thumb-link" aria-describedby="cap3">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop" alt="Technologia" loading="lazy" width="800" height="500">
+            <div class="fig-overlay"><p>Wejdź w świat elektroniki</p></div>
+          </a>
+          <figcaption id="cap3">Technologia</figcaption>
+        </figure>
+        <figure class="card">
+          <span class="badge">LAND</span>
+          <a href="#img4" class="thumb-link" aria-describedby="cap4">
+            <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?w=800&h=500&fit=crop" alt="Kosmos" loading="lazy" width="800" height="500">
+            <div class="fig-overlay"><p>Sięgnij gwiazd</p></div>
+          </a>
+          <figcaption id="cap4">Kosmos</figcaption>
+        </figure>
+        <figure class="card">
+          <span class="badge">WORK</span>
+          <a href="#img5" class="thumb-link" aria-describedby="cap5">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=500&fit=crop" alt="Osoba przy komputerze" loading="lazy" width="800" height="500">
+            <div class="fig-overlay"><p>Proces kodowania — skupienie</p></div>
+          </a>
+          <figcaption id="cap5">Proces kodowania</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div id="img1" class="lightbox" aria-hidden="false">
+      <a class="lightbox-back" href="#top" aria-hidden="true"></a>
+      <a class="lightbox-close" href="#top" aria-label="Zamknij">✕</a>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600&h=1000&fit=crop" alt="Widok natury — powiększenie">
+    </div>
+    <div id="img2" class="lightbox" aria-hidden="false">
+      <a class="lightbox-back" href="#top" aria-hidden="true"></a>
+      <a class="lightbox-close" href="#top" aria-label="Zamknij">✕</a>
+      <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1600&h=1000&fit=crop" alt="DJ — powiększenie">
+    </div>
+    <div id="img3" class="lightbox" aria-hidden="false">
+      <a class="lightbox-back" href="#top" aria-hidden="true"></a>
+      <a class="lightbox-close" href="#top" aria-label="Zamknij">✕</a>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&h=1000&fit=crop" alt="Technologia — powiększenie">
+    </div>
+    <div id="img4" class="lightbox" aria-hidden="false">
+      <a class="lightbox-back" href="#top" aria-hidden="true"></a>
+      <a class="lightbox-close" href="#top" aria-label="Zamknij">✕</a>
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?w=1600&h=1000&fit=crop" alt="Krajobraz górski — powiększenie">
+    </div>
+    <div id="img5" class="lightbox" aria-hidden="false">
+      <a class="lightbox-back" href="#top" aria-hidden="true"></a>
+      <a class="lightbox-close" href="#top" aria-label="Zamknij">✕</a>
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&h=1000&fit=crop" alt="Proces kodowania — powiększenie">
+    </div>
+    <section class="video-section">
+      <h2 class="sticky-title">Wideo (YouTube)</h2>
+      <div class="media-card">
+        <iframe
+          width="100%"
+          height="480"
+          src="https://www.youtube-nocookie.com/embed/8DEWLb3p288"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+    <section class="audio-section">
+      <h2 class="sticky-title">Audio</h2>
+      <div class="media-card">
+        <audio controls>
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+          Twoja przeglądarka nie obsługuje audio.
+        </audio>
+      </div>
+    </section>
+  </main>
+  <a class="back-to-top" href="#top" aria-label="Powrót do góry">↑</a>
+   <script src="script.js"></script>
+</body>
+</html>

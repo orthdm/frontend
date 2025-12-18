@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zadanie 6 — Asynchroniczność i API</title>
+  <meta name="description" content="Zadanie 6 — Promises, async/await, Fetch API" />
+   <meta name="author" content="Patryk Barański">
+  <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Zadanie 6 — Asynchroniczność i Fetch API</h1>
+        <div class="small">Demonstracja: Promises, async/await, Promise.all, Promise.race (timeout), Fetch API + obsługa błędów</div>
+      </div>
+      <div class="controls">
+        <button id="refreshBtn">Refresh (pobierz)</button>
+        <button id="demoPromisesBtn" class="secondary">Pokaż demo Promises</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <div id="statusArea" class="loader" aria-live="polite" style="visibility:hidden">
+        <div class="spinner" id="spinner"></div>
+        <div id="statusText">Ładowanie...</div>
+      </div>
+
+      <div id="errorArea" style="display:none" role="alert"></div>
+
+      <div id="tableContainer"></div>
+
+      <div id="postsContainer" class="posts"></div>
+
+      <div class="demo-block">
+        <strong>Uwagi:</strong>
+        <ul>
+          <li>API: <code>https://jsonplaceholder.typicode.com</code></li>
+          <li>Kliknij w wiersz użytkownika, aby pobrać i wyświetlić jego posty (nested API call).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:12px">
+      <h3>Log / demo (konsola i poniżej)</h3>
+      <div id="demoLog" style="white-space:pre-wrap;font-family:monospace;font-size:13px"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

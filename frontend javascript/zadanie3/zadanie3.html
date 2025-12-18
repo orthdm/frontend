@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listy i tabela - Zadanie 3</title>
+  <meta name="description" content="Przykłady list i tabela porównawcza tagów HTML.">
+  <meta name="author" content="Patryk Barański">
+</head>
+<body>
+  <h1>Przykłady list i tabela</h1>
+  <h2>Lista nieuporządkowana</h2>
+  <ul>
+    <li>Elastyczność</li>
+    <li>Przenośność</li>
+    <li>Skalowalność</li>
+    <li>Dostępność</li>
+    <li>Wsparcie społeczności</li>
+  </ul>
+
+  <h2>Lista uporządkowana</h2>
+  <ol>
+    <li>Analiza wymagań</li>
+    <li>Projektowanie systemu</li>
+    <li>Pisanie kodu</li>
+    <li>Testowanie</li>
+    <li>Wdrażanie</li>
+  </ol>
+
+  <h2>Lista definicji</h2>
+  <dl>
+    <dt>DOCTYPE</dt>
+      <dd>Deklaracja informująca przeglądarkę o wersji HTML.</dd>
+    <dt>Tag</dt>
+      <dd>Element języka znaczników, np. &lt;p&gt; lub &lt;a&gt;.</dd>
+    <dt>Atrybut</dt>
+      <dd>Parametr dopasowujący zachowanie tagu, np. href czy src.</dd>
+    <dt>Semantyka</dt>
+      <dd>Zastosowanie odpowiednich tagów dla znaczenia treści.</dd>
+    <dt>Walidacja</dt>
+      <dd>Sprawdzenie kodu pod kątem zgodności ze standardem.</dd>
+  </dl>
+
+  <h2>Zagnieżdżona lista</h2>
+  <ul>
+    <li>Główna kategoria A
+      <ul>
+        <li>Podkategoria A1</li>
+        <li>Podkategoria A2</li>
+      </ul>
+    </li>
+    <li>Główna kategoria B
+      <ul>
+        <li>Podkategoria B1</li>
+        <li>Podkategoria B2</li>
+      </ul>
+    </li>
+    <li>Główna kategoria C</li>
+  </ul>
+  <h2>Porównanie podstawowych tagów HTML</h2>
+  <table id="tag-compare" class="data-table" border="1" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr><th colspan="4">Podstawowe tagi HTML</th></tr>
+      <tr>
+        <th>Nazwa</th>
+        <th>Przeznaczenie</th>
+        <th>Przykład użycia</th>
+        <th>Czy wymaga zamknięcia?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&lt;a&gt;</td>
+        <td>Tworzy hiperłącze</td>
+        <td><code>&lt;a href="url"&gt;link&lt;/a&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;img&gt;</td>
+        <td>Wstawia obrazek</td>
+        <td><code>&lt;img src="obraz.jpg" alt="tekst"&gt;</code></td>
+        <td>nie</td>
+      </tr>
+      <tr>
+        <td>&lt;p&gt;</td>
+        <td>Akapit tekstu</td>
+        <td><code>&lt;p&gt;Tekst&lt;/p&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;ul&gt;</td>
+        <td>Lista nieuporządkowana</td>
+        <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
+        <td>tak</td>
+      </tr>
+      <tr>
+        <td>&lt;div&gt;</td>
+        <td>Kontener blokowy</td>
+        <td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+        <td>tak</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Podłączenie skryptu JS - plik script.js w tym samym katalogu -->
+  <script src="script.js"></script>
+</body>
+</html>
